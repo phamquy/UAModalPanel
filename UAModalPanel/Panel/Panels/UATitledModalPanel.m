@@ -28,12 +28,13 @@
 		self.titleBarHeight = DEFAULT_TITLE_BAR_HEIGHT;
 		
 		CGFloat colors[8] = { 1, 1, 1, 1, 0, 0, 0, 1 };
-		self.titleBar = [UANoisyGradientBackground gradientWithFrame:CGRectZero
-															   style:UAGradientBackgroundStyleLinear
-															   color:colors
-															lineMode:UAGradientLineModeTopAndBottom
-														noiseOpacity:0.2
-														   blendMode:kCGBlendModeNormal];
+		self.titleBar = [UANoisyGradientBackground
+                         gradientWithFrame:CGRectZero
+                         style:UAGradientBackgroundStyleLinear
+                         color:colors
+                         lineMode:UAGradientLineModeTopAndBottom
+                         noiseOpacity:0.2
+                         blendMode:kCGBlendModeNormal];
 		
 		[self.roundedRect addSubview:self.titleBar];
 		

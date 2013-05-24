@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Urban Apps. All rights reserved.
 //
 
+#define UAMODALVIEW_DEBUG
+
 #import "UAViewController.h"
 
 #import "UAExampleModalPanel.h"
@@ -23,7 +25,11 @@
 
 - (IBAction)showModalPanel:(id)sender {
 	
-	UAExampleModalPanel *modalPanel = [[[UAExampleModalPanel alloc] initWithFrame:self.view.bounds title:[(UIButton *)sender titleForState:UIControlStateNormal]] autorelease];
+	UAExampleModalPanel *modalPanel = [[[UAExampleModalPanel alloc]
+                                        initWithFrame:self.view.bounds
+                                        title:[(UIButton *)sender
+                                               titleForState:UIControlStateNormal]]
+                                       autorelease];
 	 
 	/////////////////////////////////
 	// Randomly use the blocks method, delgate methods, or neither of them

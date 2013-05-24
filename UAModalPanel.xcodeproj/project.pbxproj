@@ -214,15 +214,15 @@
 			children = (
 				E65CAB2E14CFB98C004F3776 /* UAAppDelegate.h */,
 				E65CAB2F14CFB98C004F3776 /* UAAppDelegate.m */,
-				E65CAB2414CFB98C004F3776 /* UAViewController.m */,
-				E65CAB2514CFB98C004F3776 /* UAViewController.h */,
-				E65CAB2114CFB98C004F3776 /* UAExampleModalPanel.m */,
 				E65CAB2214CFB98C004F3776 /* UAExampleModalPanel.h */,
-				E65CAB4614CFB9C1004F3776 /* Images */,
-				E65CAB4714CFB9D5004F3776 /* XIBs */,
-				E64F520C14BA98FA009CB18D /* Supporting Files */,
+				E65CAB2114CFB98C004F3776 /* UAExampleModalPanel.m */,
+				E65CAB2514CFB98C004F3776 /* UAViewController.h */,
+				E65CAB2414CFB98C004F3776 /* UAViewController.m */,
 				E64F520414BA98FA009CB18D /* Frameworks */,
+				E65CAB4614CFB9C1004F3776 /* Images */,
 				E64F520214BA98FA009CB18D /* Products */,
+				E64F520C14BA98FA009CB18D /* Supporting Files */,
+				E65CAB4714CFB9D5004F3776 /* XIBs */,
 			);
 			name = "Example Project Files";
 			path = UAModalPanel;

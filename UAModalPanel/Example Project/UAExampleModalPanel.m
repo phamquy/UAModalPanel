@@ -14,7 +14,9 @@
 
 @synthesize viewLoadedFromXib;
 
-- (id)initWithFrame:(CGRect)frame title:(NSString *)title {
+- (id)initWithFrame:(CGRect)frame
+              title:(NSString *)title
+{
 	if ((self = [super initWithFrame:frame])) {
 		
 		CGFloat colors[8] = BLACK_BAR_COMPONENTS;
@@ -31,13 +33,22 @@
 			UADebugLog(@"Showing a randomized panel for modalPanel: %@", self);
 			
 			// Margin between edge of container frame and panel. Default = {20.0, 20.0, 20.0, 20.0}
-			self.margin = UIEdgeInsetsMake(((arc4random() % 4) + 1) * 20.0f, ((arc4random() % 4) + 1) * 20.0f, ((arc4random() % 4) + 1) * 20.0f, ((arc4random() % 4) + 1) * 20.0f);
+			self.margin = UIEdgeInsetsMake(((arc4random() % 4) + 1) * 20.0f,
+                                           ((arc4random() % 4) + 1) * 20.0f,
+                                           ((arc4random() % 4) + 1) * 20.0f,
+                                           ((arc4random() % 4) + 1) * 20.0f);
 			
 			// Margin between edge of panel and the content area. Default = {20.0, 20.0, 20.0, 20.0}
-			self.padding = UIEdgeInsetsMake(((arc4random() % 4) + 1) * 20.0f, ((arc4random() % 4) + 1) * 20.0f, ((arc4random() % 4) + 1) * 20.0f, ((arc4random() % 4) + 1) * 20.0f);
+			self.padding = UIEdgeInsetsMake(((arc4random() % 4) + 1) * 20.0f,
+                                            ((arc4random() % 4) + 1) * 20.0f,
+                                            ((arc4random() % 4) + 1) * 20.0f,
+                                            ((arc4random() % 4) + 1) * 20.0f);
 			
 			// Border color of the panel. Default = [UIColor whiteColor]
-			self.borderColor = [UIColor colorWithRed:(arc4random() % 2) green:(arc4random() % 2) blue:(arc4random() % 2) alpha:1.0];
+			self.borderColor = [UIColor colorWithRed:(arc4random() % 2)
+                                               green:(arc4random() % 2)
+                                                blue:(arc4random() % 2)
+                                               alpha:1.0];
 			
 			// Border width of the panel. Default = 1.5f;
 			self.borderWidth = ((arc4random() % 21)) * 0.5f;
@@ -46,13 +57,17 @@
 			self.cornerRadius = (arc4random() % 21);
 			
 			// Color of the panel itself. Default = [UIColor colorWithWhite:0.0 alpha:0.8]
-			self.contentColor = [UIColor colorWithRed:(arc4random() % 2) green:(arc4random() % 2) blue:(arc4random() % 2) alpha:1.0];
+			self.contentColor = [UIColor colorWithRed:(arc4random() % 2)
+                                                green:(arc4random() % 2)
+                                                 blue:(arc4random() % 2)
+                                                alpha:1.0];
 			
 			// Shows the bounce animation. Default = YES
 			self.shouldBounce = (arc4random() % 2);
 			
 			// Shows the actionButton. Default title is nil, thus the button is hidden by default
-			[self.actionButton setTitle:@"Foobar" forState:UIControlStateNormal];
+			[self.actionButton setTitle:@"Foobar"
+                               forState:UIControlStateNormal];
 
 			// Height of the title view. Default = 40.0f
 			[self setTitleBarHeight:((arc4random() % 5) + 2) * 20.0f];
@@ -62,6 +77,7 @@
 				(arc4random() % 2), (arc4random() % 2), (arc4random() % 2), 1,
 				(arc4random() % 2), (arc4random() % 2), (arc4random() % 2), 1
 			};
+            
 			[[self titleBar] setColorComponents:colors];
 			
 			// The gradient style (Linear, linear reversed, radial, radial reversed, center highlight). Default = UAGradientBackgroundStyleLinear
